@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Documentation - NutriSlider</title>
     <style>
+        :root {
+            --primary-blue: #007AFF;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --background-secondary: #f5f5f7;
+            --divider-color: #d2d2d7;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
-            color: #333;
+            color: var(--text-primary);
+            background-color: #ffffff;
         }
         
         .nav-bar {
@@ -21,11 +30,13 @@
             backdrop-filter: blur(10px);
             margin: -16px -16px 20px -16px;
             padding: 12px 16px;
+            z-index: 100;
+            border-bottom: 1px solid var(--divider-color);
         }
         
         .segmented-control {
             display: flex;
-            background-color: #f1f1f1;
+            background-color: var(--background-secondary);
             border-radius: 8px;
             padding: 2px;
             margin: 0 auto;
@@ -35,7 +46,7 @@
         .segmented-control a {
             flex: 1;
             text-align: center;
-            color: #666;
+            color: var(--text-secondary);
             text-decoration: none;
             padding: 7px 0;
             border-radius: 6px;
@@ -49,16 +60,18 @@
         
         .segmented-control a.active {
             background-color: white;
-            color: #007AFF;
+            color: var(--primary-blue);
             box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
         
         h1 {
-            color: #2c3e50;
-            margin: 24px 0 12px 0;
-            font-size: 32px;
+            color: var(--text-primary);
+            margin: 32px 0 16px 0;
+            font-size: 40px;
             text-align: center;
-            line-height: 1.2;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .content {
@@ -67,30 +80,33 @@
         
         .last-updated {
             text-align: center;
-            color: #7f8c8d;
+            color: var(--text-secondary);
             font-size: 15px;
-            margin: 8px 0 24px 0;
+            margin: 8px 0 20px 0;
         }
         
         .intro-text {
-            margin: 16px 0 24px 0;
-            font-size: 16px;
-            color: #666;
+            text-align: center;
+            margin: 16px 0 32px 0;
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
         
         .document-links {
             margin-top: 16px;
+            display: grid;
+            gap: 16px;
         }
         
         .document-link {
             display: block;
-            padding: 16px;
-            margin: 12px 0;
-            background-color: #f8f9fa;
+            padding: 24px;
+            background-color: var(--background-secondary);
             border-radius: 12px;
             text-decoration: none;
-            color: #2c3e50;
-            transition: transform 0.2s, box-shadow 0.2s;
+            color: var(--text-primary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
         .document-link:hover {
@@ -99,24 +115,40 @@
         }
         
         .document-link h3 {
-            margin: 0 0 6px 0;
-            color: #007AFF;
-            font-size: 18px;
+            margin: 0 0 8px 0;
+            color: var(--primary-blue);
+            font-size: 20px;
+            font-weight: 600;
         }
         
         .document-link p {
             margin: 0;
-            color: #666;
-            font-size: 15px;
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 1.5;
         }
         
         footer {
-            margin-top: 32px;
+            margin-top: 48px;
             text-align: center;
-            color: #7f8c8d;
+            color: var(--text-secondary);
             font-size: 13px;
-            border-top: 1px solid #eee;
-            padding-top: 16px;
+            border-top: 1px solid var(--divider-color);
+            padding-top: 24px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            body {
+                padding: 12px;
+            }
+            
+            .document-link {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -134,7 +166,7 @@
     <div class="last-updated">Last updated: December 2024</div>
 
     <div class="content">
-        <p class="intro-text">Welcome to NutriSlider's legal documentation center. Here you can find all the necessary information about how I handle your data and the terms governing the use of the app.</p>
+        <p class="intro-text">Welcome to NutriSlider's legal documentation center. Here you can find all the necessary information about how NutriSlider handles your data and the terms governing the use of the app.</p>
         
         <div class="document-links">
             <a href="privacy-policy.html" class="document-link">
