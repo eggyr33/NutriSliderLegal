@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - NutriSlider</title>
     <style>
+        :root {
+            --primary-blue: #007AFF;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --background-secondary: #f5f5f7;
+            --divider-color: #d2d2d7;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
-            color: #333;
+            color: var(--text-primary);
+            background-color: #ffffff;
         }
         
         .nav-bar {
@@ -22,11 +31,12 @@
             margin: -16px -16px 20px -16px;
             padding: 12px 16px;
             z-index: 100;
+            border-bottom: 1px solid var(--divider-color);
         }
         
         .segmented-control {
             display: flex;
-            background-color: #f1f1f1;
+            background-color: var(--background-secondary);
             border-radius: 8px;
             padding: 2px;
             margin: 0 auto;
@@ -36,7 +46,7 @@
         .segmented-control a {
             flex: 1;
             text-align: center;
-            color: #666;
+            color: var(--text-secondary);
             text-decoration: none;
             padding: 7px 0;
             border-radius: 6px;
@@ -50,16 +60,18 @@
         
         .segmented-control a.active {
             background-color: white;
-            color: #007AFF;
+            color: var(--primary-blue);
             box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
         
         h1 {
-            color: #2c3e50;
-            margin: 24px 0 12px 0;
-            font-size: 32px;
+            color: var(--text-primary);
+            margin: 32px 0 16px 0;
+            font-size: 40px;
             text-align: center;
-            line-height: 1.2;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .content {
@@ -68,21 +80,24 @@
         
         .last-updated {
             text-align: center;
-            color: #7f8c8d;
+            color: var(--text-secondary);
             font-size: 15px;
-            margin: 8px 0 24px 0;
+            margin: 8px 0 20px 0;
         }
         
         h2 {
-            color: #34495e;
-            font-size: 22px;
-            margin: 24px 0 16px 0;
+            color: var(--text-primary);
+            font-size: 24px;
+            margin: 0 0 24px 0;
+            font-weight: 600;
+            letter-spacing: -0.3px;
         }
         
         p {
             margin: 16px 0;
-            font-size: 16px;
-            color: #444;
+            font-size: 17px;
+            color: var(--text-primary);
+            line-height: 1.7;
         }
         
         ul {
@@ -91,21 +106,69 @@
         }
         
         li {
-            margin: 8px 0;
-            color: #444;
+            margin: 12px 0;
+            color: var(--text-primary);
+            font-size: 17px;
+            line-height: 1.7;
         }
         
         ul ul {
             margin: 8px 0;
         }
         
+        .contact-email {
+            color: var(--primary-blue);
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .contact-email:hover {
+            border-bottom-color: var(--primary-blue);
+        }
+
+        .section-card {
+            background-color: var(--background-secondary);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            transition: transform 0.2s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-card h2 {
+            margin-top: 0;
+        }
+        
         footer {
-            margin-top: 32px;
+            margin-top: 48px;
             text-align: center;
-            color: #7f8c8d;
+            color: var(--text-secondary);
             font-size: 13px;
-            border-top: 1px solid #eee;
-            padding-top: 16px;
+            border-top: 1px solid var(--divider-color);
+            padding-top: 24px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            body {
+                padding: 12px;
+            }
+            
+            .section-card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -123,25 +186,118 @@
     <div class="last-updated">Last updated: December 2024</div>
 
     <div class="content">
-        <!-- Previous sections 1-12 remain the same -->
+        <div class="section-card">
+            <h2>1. Introduction</h2>
+            <p>This Terms of Service agreement governs your use of NutriSlider, operated by Eduardo Rayo Jr. By downloading, installing, or using NutriSlider, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not use the App.</p>
+        </div>
         
-        <h2>13. Dispute Resolution</h2>
-        <p>Any dispute arising from or relating to these Terms or your use of NutriSlider shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law principles. You agree that:</p>
-        <ul>
-            <li>Any dispute, claim, or controversy shall be resolved exclusively by the state or federal courts located in Texas</li>
-            <li>You submit to the personal jurisdiction of such courts for the purpose of litigating all such claims</li>
-            <li>Any action arising out of or related to these Terms must be filed within one year after the cause of action arose</li>
-            <li>Any dispute resolution proceedings will be conducted on an individual basis and not in a class, consolidated, or representative action</li>
-        </ul>
+        <div class="section-card">
+            <h2>2. App Features and Services</h2>
+            <p>NutriSlider provides the following calculators and features:</p>
+            <ul>
+                <li>BMI and TDEE Calculator</li>
+                <li>Macronutrient Calculator</li>
+                <li>Body Fat Calculator (Premium Feature)</li>
+                <li>Unit Conversion (Imperial/Metric)</li>
+                <li>Customizable Settings</li>
+            </ul>
+        </div>
         
-        <h2>14. Severability</h2>
-        <p>If any provision of these Terms is found to be unenforceable or invalid under any applicable law, such unenforceability or invalidity shall not render these Terms unenforceable or invalid as a whole. Such provisions shall be deleted without affecting the remaining provisions herein, and the invalid or unenforceable provision shall be replaced with a valid and enforceable provision that comes closest to reflecting the intention underlying the invalid or unenforceable provision.</p>
+        <div class="section-card">
+            <h2>3. Health and Fitness Disclaimer</h2>
+            <p>By using NutriSlider, you acknowledge and agree that:</p>
+            <ul>
+                <li>The App provides calculations and information for general reference purposes only</li>
+                <li>The App is not a substitute for professional medical advice, diagnosis, or treatment</li>
+                <li>All calculations are estimates based on standard formulas and may not be accurate for all individuals</li>
+                <li>You should consult with qualified healthcare professionals before starting any diet or exercise program</li>
+                <li>The App is not recommended for users under 18 without parent/guardian consultation</li>
+                <li>You use the App's calculations and recommendations at your own risk</li>
+            </ul>
+        </div>
         
-        <h2>15. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law provisions.</p>
+        <div class="section-card">
+            <h2>4. Premium Features and In-App Purchases</h2>
+            <p>NutriSlider offers premium features through in-app purchases:</p>
+            <ul>
+                <li>Access to the Body Fat Calculator</li>
+                <li>Removal of advertisements</li>
+                <li>Additional preset options for diets and goals</li>
+            </ul>
+            <p>All purchases are final and non-refundable except as required by law. Refund requests must be made through Apple's App Store. We do not have the ability to process refunds directly.</p>
+        </div>
         
-        <h2>16. Contact Information</h2>
-        <p>For any questions about these Terms, please contact me at: support@nutrislider.com</p>
+        <div class="section-card">
+            <h2>5. Data Storage</h2>
+            <p>NutriSlider stores user preferences and calculator inputs locally on your device using Apple's AppStorage. For complete information about data collection and usage, please refer to the Privacy Policy.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>6. Advertisements</h2>
+            <p>The free version of NutriSlider displays third-party advertisements. NutriSlider is not responsible for the content of these advertisements. Users can remove advertisements by purchasing the premium version.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>7. Intellectual Property</h2>
+            <p>NutriSlider, including its original content, features, and functionality, is protected by copyright, trademark, and other intellectual property laws.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>8. User Responsibilities</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Use NutriSlider in compliance with all applicable laws</li>
+                <li>Not attempt to reverse engineer the App</li>
+                <li>Not use the App in any way that could damage or impair its functionality</li>
+                <li>Provide accurate information when using the calculators</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>9. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, NutriSlider shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:</p>
+            <ul>
+                <li>Your use or inability to use NutriSlider</li>
+                <li>Any conduct or content of any third party on the App</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>10. Modifications to Terms</h2>
+            <p>NutriSlider reserves the right to modify these Terms at any time. Users will be notified of any changes by updating the "Last Updated" date. Continued use of NutriSlider after any modifications indicates acceptance of the updated Terms.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>11. Termination</h2>
+            <p>NutriSlider reserves the right to terminate or suspend access to NutriSlider immediately, without prior notice, for conduct that violates these Terms or is harmful to other users.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>12. International Use</h2>
+            <p>NutriSlider is provided from the United States. If you access it from other locations, you are responsible for compliance with local laws. Some App features may not be available in all countries.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>13. Dispute Resolution</h2>
+            <p>Any dispute arising from or relating to these Terms or your use of NutriSlider shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law principles. You agree that:</p>
+            <ul>
+                <li>Any dispute, claim, or controversy shall be resolved exclusively by the state or federal courts located in Texas</li>
+                <li>You submit to the personal jurisdiction of such courts for the purpose of litigating all such claims</li>
+                <li>Any action arising out of or related to these Terms must be filed within one year after the cause of action arose</li>
+                <li>Any dispute resolution proceedings will be conducted on an individual basis and not in a class, consolidated, or representative action</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>14. Severability</h2>
+            <p>If any provision of these Terms is found to be unenforceable or invalid under any applicable law, such unenforceability or invalidity shall not render these Terms unenforceable or invalid as a whole. Such provisions shall be deleted without affecting the remaining provisions herein, and the invalid or unenforceable provision shall be replaced with a valid and enforceable provision that comes closest to reflecting the intention underlying the invalid or unenforceable provision.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>15. Contact Information</h2>
+            <p>For any questions about these Terms, please contact us at: <a href="mailto:support@nutrislider.com" class="contact-email">support@nutrislider.com</a></p>
+        </div>
     </div>
 
     <footer>
