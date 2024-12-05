@@ -12,6 +12,7 @@
             margin: 0 auto;
             padding: 16px;
             color: #333;
+            background-color: #f9f9f9;
         }
         
         .nav-bar {
@@ -22,6 +23,7 @@
             margin: -16px -16px 20px -16px;
             padding: 12px 16px;
             z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .segmented-control {
@@ -65,18 +67,35 @@
         .content {
             padding: 16px 0;
         }
+
+        .content section {
+            margin: 32px 0;
+            padding: 24px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
         
         .last-updated {
             text-align: center;
             color: #7f8c8d;
             font-size: 15px;
             margin: 8px 0 24px 0;
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
         
         h2 {
             color: #34495e;
             font-size: 22px;
-            margin: 24px 0 16px 0;
+            margin: 0 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
         }
         
         p {
@@ -97,6 +116,30 @@
         
         ul ul {
             margin: 8px 0;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-weight: 600;
+            color: #007AFF;
+            text-decoration: none;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            transition: all 0.2s ease;
+        }
+
+        .contact-email:hover {
+            background-color: #e9ecef;
+            transform: translateY(-1px);
+        }
+
+        .important-info {
+            background-color: #f8f9fa;
+            border-left: 4px solid #007AFF;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
         }
         
         footer {
@@ -123,89 +166,113 @@
     <div class="last-updated">Last updated: December 2024</div>
 
     <div class="content">
-        <h2>Introduction</h2>
-        <p>This Privacy Policy explains how NutriSlider, operated by Eduardo Rayo Jr, handles your information. As the developer of NutriSlider, I am committed to protecting your personal data and being transparent about how it is used.</p>
+        <section>
+            <h2>Introduction</h2>
+            <p>This Privacy Policy explains how NutriSlider, operated by Eduardo Rayo Jr, handles user information. NutriSlider is committed to protecting your personal data and maintaining transparency about how it is used.</p>
+        </section>
 
-        <h2>Information Storage and Collection</h2>
-        <p>NutriSlider stores the following information locally on your device:</p>
-        <ul>
-            <li>Calculator inputs and preferences:
-                <ul>
-                    <li>Height and weight measurements</li>
-                    <li>Age and gender</li>
-                    <li>Body measurements (neck, waist, hip)</li>
-                    <li>Activity level selections</li>
-                    <li>Dietary preferences and goals</li>
-                </ul>
-            </li>
-            <li>User preferences:
-                <ul>
-                    <li>Preferred units (imperial/metric)</li>
-                    <li>Selected calculation presets</li>
-                    <li>App settings configuration</li>
-                </ul>
-            </li>
-        </ul>
+        <section>
+            <h2>Information Storage and Collection</h2>
+            <p>NutriSlider stores the following information locally on your device:</p>
+            <ul>
+                <li>Calculator inputs and preferences:
+                    <ul>
+                        <li>Height and weight measurements</li>
+                        <li>Age and gender</li>
+                        <li>Body measurements (neck, waist, hip)</li>
+                        <li>Activity level selections</li>
+                        <li>Dietary preferences and goals</li>
+                    </ul>
+                </li>
+                <li>User preferences:
+                    <ul>
+                        <li>Preferred units (imperial/metric)</li>
+                        <li>Selected calculation presets</li>
+                        <li>App settings configuration</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        <h2>Data Privacy and Storage</h2>
-        <p>All personal data is stored exclusively on your device using Apple's AppStorage system. NutriSlider does not collect, transmit, or store your personal information on external servers. Your data remains on your device and can be cleared by deleting the App.</p>
+        <section>
+            <h2>Data Privacy and Storage</h2>
+            <div class="important-info">
+                <p>NutriSlider stores all personal data exclusively on your device using Apple's AppStorage system. The app does not collect, transmit, or store personal information on external servers. Your data remains on your device and can be cleared by deleting the app.</p>
+            </div>
+        </section>
 
-        <h2>Advertising</h2>
-        <p>The free version of NutriSlider includes third-party advertisements. The advertising partners may:</p>
-        <ul>
-            <li>Use device identifiers to serve relevant advertisements</li>
-            <li>Collect anonymous usage data for advertising purposes</li>
-            <li>Use tracking technologies to measure advertising effectiveness</li>
-        </ul>
-        <p>You can opt out of personalized advertising through your device settings or remove ads by purchasing the premium version.</p>
+        <section>
+            <h2>Advertising</h2>
+            <p>The free version of NutriSlider includes third-party advertisements. Our advertising partners may:</p>
+            <ul>
+                <li>Use device identifiers to serve relevant advertisements</li>
+                <li>Collect anonymous usage data for advertising purposes</li>
+                <li>Use tracking technologies to measure advertising effectiveness</li>
+            </ul>
+            <p>Users can opt out of personalized advertising through device settings or remove ads by purchasing the premium version.</p>
+        </section>
 
-        <h2>In-App Purchases</h2>
-        <p>For in-app purchases:</p>
-        <ul>
-            <li>All payment processing is handled exclusively by Apple's App Store</li>
-            <li>NutriSlider does not collect or store any payment information</li>
-            <li>Purchase records are maintained by Apple for receipt validation</li>
-        </ul>
+        <section>
+            <h2>In-App Purchases</h2>
+            <p>For in-app purchases:</p>
+            <ul>
+                <li>All payment processing is handled exclusively by Apple's App Store</li>
+                <li>NutriSlider does not collect or store any payment information</li>
+                <li>Purchase records are maintained by Apple for receipt validation</li>
+            </ul>
+        </section>
 
-        <h2>California Privacy Rights (CCPA)</h2>
-        <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to:</p>
-        <ul>
-            <li>Know what personal information is collected, used, shared, or sold</li>
-            <li>Delete personal information held by businesses</li>
-            <li>Opt-out of the sale of personal information</li>
-            <li>Non-discrimination for exercising their CCPA rights</li>
-        </ul>
-        <p>As NutriSlider stores all data locally on your device and does not collect or sell personal information, many CCPA requirements are not applicable. However, you maintain full control over your data through your device settings.</p>
+        <section>
+            <h2>California Privacy Rights (CCPA)</h2>
+            <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to:</p>
+            <ul>
+                <li>Know what personal information is collected, used, shared, or sold</li>
+                <li>Delete personal information held by businesses</li>
+                <li>Opt-out of the sale of personal information</li>
+                <li>Non-discrimination for exercising their CCPA rights</li>
+            </ul>
+            <p>As NutriSlider stores all data locally on your device and does not collect or sell personal information, many CCPA requirements are not applicable. However, users maintain full control over their data through device settings.</p>
+        </section>
 
-        <h2>European Privacy Rights (GDPR)</h2>
-        <p>For users in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
-        <ul>
-            <li>Right to access your personal data</li>
-            <li>Right to rectification of inaccurate personal data</li>
-            <li>Right to erasure of your personal data</li>
-            <li>Right to restrict processing</li>
-            <li>Right to data portability</li>
-            <li>Right to object to processing</li>
-        </ul>
-        <p>As all data is stored locally on your device, you can exercise these rights through your device settings or by deleting the App.</p>
+        <section>
+            <h2>European Privacy Rights (GDPR)</h2>
+            <p>For users in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
+            <ul>
+                <li>Right to access your personal data</li>
+                <li>Right to rectification of inaccurate personal data</li>
+                <li>Right to erasure of your personal data</li>
+                <li>Right to restrict processing</li>
+                <li>Right to data portability</li>
+                <li>Right to object to processing</li>
+            </ul>
+            <p>As all data is stored locally on your device, these rights can be exercised through device settings or by deleting the app.</p>
+        </section>
 
-        <h2>Children's Privacy</h2>
-        <p>NutriSlider is not intended for users under 18 years of age without parent/guardian consultation. I do not knowingly collect personal information from children under 13. If you believe such information has been inadvertently collected, please contact me to have it removed.</p>
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>NutriSlider is not intended for users under 18 years of age without parent/guardian consultation. We do not knowingly collect personal information from children under 13. If you believe such information has been inadvertently collected, please contact us to have it removed.</p>
+        </section>
 
-        <h2>Your Privacy Controls</h2>
-        <p>You can:</p>
-        <ul>
-            <li>Clear all stored data by deleting the App</li>
-            <li>Opt out of personalized advertising through device settings</li>
-            <li>Control App permissions through your device settings</li>
-            <li>Purchase the premium version to remove advertisements</li>
-        </ul>
+        <section>
+            <h2>Your Privacy Controls</h2>
+            <p>Users can:</p>
+            <ul>
+                <li>Clear all stored data by deleting the app</li>
+                <li>Opt out of personalized advertising through device settings</li>
+                <li>Control app permissions through device settings</li>
+                <li>Purchase the premium version to remove advertisements</li>
+            </ul>
+        </section>
 
-        <h2>Changes to This Policy</h2>
-        <p>I may update this Privacy Policy from time to time. You will be notified of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>NutriSlider may update this Privacy Policy from time to time. Users will be notified of any changes through the posting of the new Privacy Policy and an updated "Last Updated" date.</p>
+        </section>
 
-        <h2>Contact Information</h2>
-        <p>For any questions about this Privacy Policy or NutriSlider's privacy practices, please contact me at: support@nutrislider.com</p>
+        <section>
+            <h2>Contact Information</h2>
+            <p>For any questions about this Privacy Policy or NutriSlider's privacy practices, please contact us at: <a href="mailto:support@nutrislider.com" class="contact-email">support@nutrislider.com</a></p>
+        </section>
     </div>
 
     <footer>
