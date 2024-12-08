@@ -33,6 +33,33 @@
             z-index: 100;
             border-bottom: 1px solid var(--divider-color);
         }
+
+        .nav-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .brand img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+        }
+
+        .brand span {
+            font-weight: 600;
+            font-size: 17px;
+        }
         
         .segmented-control {
             display: flex;
@@ -48,7 +75,7 @@
             text-align: center;
             color: var(--text-secondary);
             text-decoration: none;
-            padding: 7px 0;
+            padding: 7px 16px;
             border-radius: 6px;
             font-size: 15px;
             transition: all 0.2s;
@@ -63,7 +90,43 @@
             color: var(--primary-blue);
             box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
-        
+
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px;
+            border-bottom: 1px solid var(--divider-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 17px;
+            border-radius: 8px;
+        }
+
+        .mobile-menu a.active {
+            background-color: var(--background-secondary);
+            color: var(--primary-blue);
+        }
+
+        /* Rest of your existing styles */
         h1 {
             color: var(--text-primary);
             margin: 32px 0 16px 0;
@@ -138,6 +201,18 @@
         }
 
         @media (max-width: 600px) {
+            .segmented-control {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .mobile-menu.show {
+                display: block;
+            }
+
             h1 {
                 font-size: 32px;
             }
@@ -154,7 +229,25 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <div class="segmented-control">
+        <div class="nav-content">
+            <a href="index.html" class="brand">
+                <!-- Replace with your actual icon -->
+                <img src="/api/placeholder/32/32" alt="NutriSlider">
+                <span>NutriSlider</span>
+            </a>
+            
+            <div class="segmented-control">
+                <a href="index.html" class="active">Home</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+            </div>
+
+            <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
             <a href="index.html" class="active">Home</a>
             <a href="privacy-policy.html">Privacy</a>
             <a href="terms-of-service.html">Terms</a>
@@ -184,5 +277,12 @@
     <footer>
         <p>Copyright © 2024 NutriSlider. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
