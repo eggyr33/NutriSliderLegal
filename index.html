@@ -51,14 +51,14 @@
         }
 
         .brand img {
-            width: 40px;  /* Increased from 32px */
-            height: 40px; /* Increased from 32px */
+            width: 40px;
+            height: 40px;
             border-radius: 10px;
         }
 
         .brand span {
             font-weight: 600;
-            font-size: 20px;  /* Increased from 17px */
+            font-size: 20px;
         }
         
         .segmented-control {
@@ -67,7 +67,7 @@
             border-radius: 8px;
             padding: 2px;
             margin: 0 auto;
-            min-width: 300px;  /* Added minimum width */
+            min-width: 300px;
         }
         
         .segmented-control a {
@@ -75,7 +75,7 @@
             text-align: center;
             color: var(--text-secondary);
             text-decoration: none;
-            padding: 7px 24px;  /* Increased horizontal padding */
+            padding: 7px 24px;
             border-radius: 6px;
             font-size: 15px;
             transition: all 0.2s;
@@ -89,16 +89,15 @@
         }
 
         .mobile-menu-button {
-            display: none;
+            display: none;  /* Hidden by default */
             background: none;
             border: none;
             padding: 8px;
             cursor: pointer;
             color: var(--text-primary);
-            font-size: 28px;  /* Increased from default */
-            width: 44px;     /* Added fixed width */
-            height: 44px;    /* Added fixed height */
-            display: flex;
+            font-size: 28px;
+            width: 44px;
+            height: 44px;
             align-items: center;
             justify-content: center;
         }
@@ -129,7 +128,6 @@
             color: var(--primary-blue);
         }
 
-        /* Rest of your existing styles remain the same */
         h1 {
             color: var(--text-primary);
             margin: 32px 0 16px 0;
@@ -209,7 +207,7 @@
             }
 
             .mobile-menu-button {
-                display: flex;  /* Changed from 'block' to 'flex' */
+                display: flex;  /* Only show on mobile */
             }
 
             .mobile-menu.show {
@@ -257,7 +255,6 @@
         </div>
     </nav>
 
-    <!-- Rest of your HTML remains the same -->
     <h1>NutriSlider Legal Center</h1>
     
     <div class="last-updated">Last updated: December 2024</div>
