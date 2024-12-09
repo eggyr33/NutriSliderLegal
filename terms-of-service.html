@@ -33,6 +33,33 @@
             z-index: 100;
             border-bottom: 1px solid var(--divider-color);
         }
+
+        .nav-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .brand img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .brand span {
+            font-weight: 600;
+            font-size: 20px;
+        }
         
         .segmented-control {
             display: flex;
@@ -40,7 +67,7 @@
             border-radius: 8px;
             padding: 2px;
             margin: 0 auto;
-            max-width: 343px;
+            min-width: 300px;
         }
         
         .segmented-control a {
@@ -48,20 +75,57 @@
             text-align: center;
             color: var(--text-secondary);
             text-decoration: none;
-            padding: 7px 0;
+            padding: 7px 24px;
             border-radius: 6px;
             font-size: 15px;
             transition: all 0.2s;
-            min-width: 0;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         
         .segmented-control a.active {
             background-color: white;
             color: var(--primary-blue);
             box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-size: 28px;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px;
+            border-bottom: 1px solid var(--divider-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 17px;
+            border-radius: 8px;
+        }
+
+        .mobile-menu a.active {
+            background-color: var(--background-secondary);
+            color: var(--primary-blue);
         }
         
         h1 {
@@ -154,6 +218,18 @@
         }
 
         @media (max-width: 600px) {
+            .segmented-control {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: flex;
+            }
+
+            .mobile-menu.show {
+                display: block;
+            }
+
             h1 {
                 font-size: 32px;
             }
@@ -174,7 +250,25 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <div class="segmented-control">
+        <div class="nav-content">
+            <a href="index.html" class="brand">
+                <!-- Replace with your actual icon -->
+                <img src="/api/placeholder/40/40" alt="NutriSlider">
+                <span>NutriSlider</span>
+            </a>
+            
+            <div class="segmented-control">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html" class="active">Terms</a>
+            </div>
+
+            <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
             <a href="index.html">Home</a>
             <a href="privacy-policy.html">Privacy</a>
             <a href="terms-of-service.html" class="active">Terms</a>
