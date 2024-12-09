@@ -51,16 +51,14 @@
         }
 
         .brand svg {
-    width: 32px;
-    height: 32px;
-}
+            width: 32px;
+            height: 32px;
+        }
 
-.brand span {
-    font-weight: 600;
-    font-size: 20px;
-    /* Add a bit of spacing between icon and text */
-    margin-left: 8px;
-}
+        .brand span {
+            font-weight: 600;
+            font-size: 20px;
+        }
         
         .segmented-control {
             display: flex;
@@ -90,7 +88,7 @@
         }
 
         .mobile-menu-button {
-            display: none;  /* Hidden by default */
+            display: none;
             background: none;
             border: none;
             padding: 8px;
@@ -208,7 +206,7 @@
             }
 
             .mobile-menu-button {
-                display: flex;  /* Only show on mobile */
+                display: flex;
             }
 
             .mobile-menu.show {
@@ -233,8 +231,16 @@
     <nav class="nav-bar">
         <div class="nav-content">
             <a href="index.html" class="brand">
-                <!-- Replace with your actual icon -->
-                <img src="WebAppIcon.png" alt="NutriSlider">
+                <!-- Replace this with your actual SVG code exported from Figma -->
+                <svg width="32" height="32" viewBox="0 0 32 32">
+                    <!-- Your SVG paths here -->
+                    <rect x="4" y="8" width="8" height="4" fill="#FF9500"/>
+                    <rect x="4" y="14" width="8" height="4" fill="#FF3B30"/>
+                    <rect x="4" y="20" width="8" height="4" fill="#34C759"/>
+                    <rect x="12" y="8" width="16" height="4" fill="#8E8E93"/>
+                    <rect x="12" y="14" width="16" height="4" fill="#8E8E93"/>
+                    <rect x="12" y="20" width="16" height="4" fill="#8E8E93"/>
+                </svg>
                 <span>NutriSlider</span>
             </a>
             
