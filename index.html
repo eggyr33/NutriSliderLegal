@@ -51,10 +51,16 @@
         }
 
         .brand img {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-        }
+    width: 40px;
+    height: 40px;
+    /* Remove border-radius if you don't want rounded corners */
+    /* border-radius: 10px; */
+    /* Add this to keep image crisp */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
 
         .brand span {
             font-weight: 600;
