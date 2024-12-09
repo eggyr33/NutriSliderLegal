@@ -51,21 +51,22 @@
         }
 
         .brand img {
-    width: 40px;
-    height: 40px;
-    /* Remove border-radius if you don't want rounded corners */
-    /* border-radius: 10px; */
-    /* Add this to keep image crisp */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
-        .brand span {
-            font-weight: 600;
-            font-size: 20px;
-        }
+.brand span {
+    font-weight: 600;
+    font-size: 20px;
+    /* Add a bit of spacing between icon and text */
+    margin-left: 8px;
+}
         
         .segmented-control {
             display: flex;
